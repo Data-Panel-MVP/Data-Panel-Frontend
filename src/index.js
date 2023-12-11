@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./components/local/Login/Login";
-import Signup from "./components/local/Signup/Signup";
-import Category from "./components/local/Category/Category";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
+import Category from "./components/Category/Category";
 
 import App from "./App";
 

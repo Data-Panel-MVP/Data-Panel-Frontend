@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import Login from "/src/components/local/Login/Login";
-import Signup from "/src/components/local/Signup/Signup";
+import Login from "../Login/Login";
+import Signup from "../Signup/Signup";
 import "./LoginSignupContainer.css";
 
 const LoginSignupContainer = () => {

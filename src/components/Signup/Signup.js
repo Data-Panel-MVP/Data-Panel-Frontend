@@ -4,21 +4,22 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [name, setName] = useState("");
+  const [username, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   async function signUp() {
-    let item = { name, email, password };
-    console.warn(item);
-
+    let user = { username, email, password };
+    console.warn(user);
     let result = await axios.post(
       "http://localhost:4000/users/register",
-      FormData,
+      //FormData,
+      user,
       {
-        body: JSON.stringify(item),
+        //body: user,
         headers: {
+          
           "Content-Type": "application/json",
           Accept: "application/json",
         },

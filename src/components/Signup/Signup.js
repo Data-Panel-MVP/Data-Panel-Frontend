@@ -10,24 +10,40 @@ const Signup = () => {
   const navigate = useNavigate();
 
   async function signUp() {
-    let user = { username, email, password };
-    console.warn(user);
-    let result = await axios.post(
-      "http://localhost:4000/users/register",
-      //FormData,
-      user,
-      {
-        //body: user,
-        headers: {
-          
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      }
-    );
-    result = await result.json();
-    localStorage.setItem("user-info", JSON.stringify(result));
-    navigate("/category");
+    try {
+      let user = { username, email, password };
+      console.warn(user);
+
+      // Fix 1: Use the `fetch` API instead of Axios
+      // const response = await fetch("http://localhost:4000/users/register", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     Accept: "application/json",
+      //   },
+      //   body: JSON.stringify(user),
+      // });
+
+      // Fix 2: If using Axios, make sure the server is running
+      // and the endpoint is correct:
+      const response = await axios.post(
+        "http://localhost:4000/users/register",
+        user,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
+
+      const result = await response.json();
+      localStorage.setItem("user-info", JSON.stringify(result));
+      navigate("/category");
+    } catch (error) {
+      console.error(error);
+      // Handle any network errors or API errors here
+    }
   }
 
   return (

@@ -14,18 +14,6 @@ const Signup = () => {
       let user = { username, email, password };
       console.warn(user);
 
-      // Fix 1: Use the `fetch` API instead of Axios
-      // const response = await fetch("http://localhost:4000/users/register", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //     Accept: "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // });
-
-      // Fix 2: If using Axios, make sure the server is running
-      // and the endpoint is correct:
       const response = await axios.post(
         "http://localhost:4000/users/register",
         user,
@@ -42,7 +30,6 @@ const Signup = () => {
       navigate("/category");
     } catch (error) {
       console.error(error);
-      // Handle any network errors or API errors here
     }
   }
 

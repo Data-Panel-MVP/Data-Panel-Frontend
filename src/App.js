@@ -5,8 +5,8 @@ import logo from "./logo.png";
 const App = () => {
   return (
     <div className="App">
-      <div class="container">
-        <div class="side">
+      <div className="container">
+        <div className="side">
           <h1>
             <img src={logo} alt="Logo" />
           </h1>

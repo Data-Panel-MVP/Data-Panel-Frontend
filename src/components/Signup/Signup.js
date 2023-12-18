@@ -9,30 +9,21 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  async function signUp(e) {
+  const signUp = async (e) => {
     e.preventDefault();
+    const user = { username, email, password };
     try {
-      let user = { username, email, password };
-      console.warn(user);
-
       const response = await axios.post(
         "http://localhost:4000/users/register",
-        user,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
+        user
       );
-
-      const result = await response.json();
-      localStorage.setItem("user-info", JSON.stringify(result));
+      const data = response?.data;
+      console.log(data);
       navigate("/category");
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="signup">

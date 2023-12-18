@@ -8,30 +8,22 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  async function login(e) {
+  const login = async (e) => {
     e.preventDefault();
-    try {
-      let user = { email, password };
-      console.warn(user);
-
+    const user = {email, password };
+    console.log(user)
+   try {
       const response = await axios.post(
         "http://localhost:4000/users/login",
-        user,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
+        user
       );
-
-      const result = await response.json();
-      localStorage.setItem("user-info", JSON.stringify(result));
+      const data = response?.data;
+      console.log(data);
       navigate("/category");
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
-  }
+  };
   return (
     <div className="login">
       <h1>Login</h1>
@@ -45,6 +37,7 @@ const Login = () => {
             placeholder={"Enter your Email"}
             autoComplete="off"
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </div>
         <div className="group">
@@ -56,6 +49,7 @@ const Login = () => {
             placeholder={"Enter your Password"}
             autoComplete="off"
             onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
         </div>
         <div className="addtext">

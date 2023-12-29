@@ -1,0 +1,32 @@
+/* App.css */
+
+.savingcontainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .saving-buttons {
+    display: flex;
+    padding-right: 50px;
+  }
+  
+  .buttonsa {
+    margin-left: 30px;
+    border: none;
+    background-color: #ff7703;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .buttonsa:hover {
+    background-color: #995d03;
+  }
+  

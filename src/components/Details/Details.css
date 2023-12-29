@@ -1,0 +1,68 @@
+.form-container {
+    width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0efef;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-field select,
+  input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 3px;
+    background-color: transparent;
+    border-color: black;
+  }
+  
+  .form-field button {
+    margin-top: 3px;
+    padding: 5px;
+    cursor: pointer;
+    border: transparent;
+    color: blue;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .form-field button:hover {
+    text-decoration: underline;
+  }
+  .side-by-side {
+    display: flex;
+  }
+  
+  .side-by-side label {
+    width: 460px;
+    margin-right: 10px;
+  }
+  
+  .side-by-side select,
+  .side-by-side input {
+    width: calc(300px);
+    margin-bottom: 20px;
+  }
+  
+  .add button {
+    cursor: pointer;
+    border: transparent;
+    color: blue;
+    border: none;
+  }
+  .add button:hover {
+    text-decoration: underline;
+  }
+  

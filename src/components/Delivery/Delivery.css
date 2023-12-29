@@ -1,0 +1,44 @@
+/* FormComponent.css */
+.formm-containerrr {
+    width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0efef;
+  }
+  
+  .formm-fielddd {
+    margin-bottom: 15px;
+  }
+  
+  .formm-fielddd label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .formm-fielddd select {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 3px;
+    background-color: transparent;
+    border-color: black;
+  }
+  
+  .side-by-side3 {
+    display: flex;
+  }
+  
+  .side-by-side3 label {
+    width: 460px;
+    margin-right: 10px;
+  }
+  
+  .side-by-side3 select {
+    width: calc(300px);
+    margin-bottom: 20px;
+  }
+  

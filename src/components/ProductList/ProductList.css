@@ -1,0 +1,113 @@
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .card1 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+  
+  .cardstyles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cardimg {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox1 {
+    margin-bottom: 10px;
+    margin-left: 240px;
+  }
+  
+  .cardbody {
+    text-align: left;
+  }
+  
+  .cardtitle {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 8px;
+  }
+  
+  .cardsubtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .cardtext {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pageitem {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .page-link:hover {
+    background-color: #8a5b40;
+    color: #fff;
+  }
+  
+  .active .page-link {
+    background-color: #8a5b40;
+    color: #fff;
+    border: 1px solid black;
+  }
+  
+  .previousLabel,
+  .nextLabel {
+    margin: 0 5px;
+    background-color: #f6c479;
+    color: #fff;
+    border: 1px solid #f6c479;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .previous:hover,
+  .next:hover {
+    background-color: #f6c479;
+    border-color: #f6c479;
+  }
+  

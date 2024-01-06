@@ -2,6 +2,7 @@ import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProductList.css";
+import Trash from "./trash.jpg";
 
 export default function ProductList() {
   const [items, setItems] = useState([]);
@@ -83,9 +84,14 @@ export default function ProductList() {
                 <input type="checkbox" className="checkbox1" />
                 <img
                   src={`https://via.placeholder.com/150?text=Image${item.id}`}
-                  alt={`Image${item.id}`}
+                  alt={`${item.id}`}
                   className="cardimg"
                 />
+                <img
+                src={Trash} 
+                alt="Trash"
+                className="trash-icon"
+              />
 
                 <div className="cardbody">
                   <h5 className="cardtitle">Id: {item.id} </h5>

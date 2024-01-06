@@ -46,25 +46,6 @@ export default function ProductList() {
       return [];
     }
   };
-
-  const handlePreviousClick = async () => {
-    if (currentPage > 1) {
-      const newPage = currentPage - 1;
-      setCurrentPage(newPage);
-    }
-  };
-
-  const handleNextClick = async () => {
-    if (currentPage < pageCount) {
-      const newPage = currentPage + 1;
-      setCurrentPage(newPage);
-    }
-  };
-
-  const handlePageButtonClick = async (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       const commentsFromServer = await fetchComments(currentPage);
